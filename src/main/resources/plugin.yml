@@ -1,0 +1,32 @@
+name: EnchantmentSeedRefresh
+description: EnchantmentSeedRefresh by RalleWhite
+version: 1.1
+main: tech.rchr.enchantmentseedrefresh.EnchantmentSeedRefreshPlugin
+api-version: 1.21
+commands:
+  esr:
+    description: Main command for the Enchantment Seed Refresh plugin
+    usage: /<command> <on|off|cooldown|refresh|status|?>  # Lists available subcommands
+    aliases: [enchantseedrefresh]
+    subcommands:
+      on:
+        description: Enable the Enchantment Seed Refresh plugin for the player
+        usage: /<command> on
+      off:
+        description: Disable the Enchantment Seed Refresh plugin for the player
+        usage: /<command> off
+      refresh:
+        description: Manually refresh your enchantment seed
+        usage: /<command> refresh
+      status:
+        description: Show the current plugin status and cooldown
+        usage: /<command> status
+      cooldown:
+        description: Set the cooldown time for enchantment seed refresh (Admin only)
+        usage: /<command> cooldown <time in ms>
+        permission: esr.cooldown
+        permission-message: "You don't have permission to use this command."
+permissions:
+  esr.cooldown:
+    description: Allows users to set the cooldown time
+    default: op # Only ops can use this command by default

@@ -1,0 +1,7 @@
+# Enchantment Seed Refresh Plugin Settings
+
+# The cooldown time in milliseconds (default is 1000ms).
+refreshCooldown: 1000
+
+# A list of players who have the plugin enabled.
+enabledPlayers: []
